@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import console
 import editor
 import ui
@@ -15,7 +16,10 @@ while True:
 		editor.set_selection(s+i, s+i+l)
 		i+=l
 		s+=i
-		console.alert('find next','find next','next')
+		try:
+			console.alert('find next','find next','next')
+		except KeyboardInterrupt:
+			break
 	else:
 		console.hud_alert('not found.')
 		break
